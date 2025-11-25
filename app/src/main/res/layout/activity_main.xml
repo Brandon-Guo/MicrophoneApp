@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8px"
+        android:paddingTop="16px"
+        android:paddingBottom="16px"
+        android:text="錄製選項："
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16px"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintLeft_toRightOf="@id/tv_title"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8px"
+        android:paddingTop="16px"
+        android:paddingBottom="16px"
+        android:text="SampleRate："
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <Spinner
+        android:id="@+id/spinner_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16px"
+        app:layout_constraintBottom_toBottomOf="@id/tv_rate"
+        app:layout_constraintLeft_toRightOf="@id/tv_rate"
+        app:layout_constraintTop_toTopOf="@id/tv_rate" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_channel_index_mask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8px"
+        android:paddingTop="16px"
+        android:paddingBottom="16px"
+        android:text="ChannelIndexMask："
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rate" />
+
+    <Spinner
+        android:id="@+id/spinner_channel_index_mask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16px"
+        app:layout_constraintBottom_toBottomOf="@id/tv_channel_index_mask"
+        app:layout_constraintLeft_toRightOf="@id/tv_channel_index_mask"
+        app:layout_constraintTop_toTopOf="@id/tv_channel_index_mask" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_channel_mask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8px"
+        android:paddingTop="16px"
+        android:paddingBottom="16px"
+        android:text="ChannelMask："
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_channel_index_mask" />
+
+
+    <Spinner
+        android:id="@+id/spinner_channel_mask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16px"
+        app:layout_constraintBottom_toBottomOf="@id/tv_channel_mask"
+        app:layout_constraintLeft_toRightOf="@id/tv_channel_mask"
+        app:layout_constraintTop_toTopOf="@id/tv_channel_mask" />
+
+
+    <!--    <RadioGroup-->
+    <!--        android:id="@+id/select_group"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tv_title">-->
+
+    <!--        <androidx.appcompat.widget.AppCompatRadioButton-->
+    <!--            android:id="@+id/radio_1_channel"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:enabled="false"-->
+    <!--            android:text="單聲道"-->
+    <!--            app:layout_constraintLeft_toLeftOf="parent" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatRadioButton-->
+    <!--            android:id="@+id/radio_2_channel"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:enabled="false"-->
+    <!--            android:text="雙聲道"-->
+    <!--            app:layout_constraintLeft_toLeftOf="parent" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatRadioButton-->
+    <!--            android:id="@+id/radio_6_channel"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:enabled="false"-->
+    <!--            android:text="六聲道"-->
+    <!--            app:layout_constraintLeft_toLeftOf="parent" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatRadioButton-->
+    <!--            android:id="@+id/radio_8_channel"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="八聲道"-->
+    <!--            app:layout_constraintLeft_toLeftOf="parent" />-->
+
+
+    <!--    </RadioGroup>-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_record_audio_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16px"
+        android:enabled="false"
+        android:text="開始錄音"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_record_audio_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16px"
+        android:enabled="false"
+        android:text="停止錄音"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_record_audio_start" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_info_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10px"
+        android:paddingTop="10px"
+        android:paddingRight="10px"
+        android:text="裝置資訊"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_channel_mask" />
+
+    <!-- TabLayout -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info_title"
+        app:layout_constraintVertical_bias="0.0"
+        app:tabGravity="fill"
+        app:tabIndicatorFullWidth="true"
+        app:tabMode="fixed" />
+
+    <!-- ViewPager2 -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
